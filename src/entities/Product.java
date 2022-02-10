@@ -30,8 +30,8 @@ public class Product {
 		this.price = price;
 	}
 
-	public static void staticPriceUpdate(Product p) {
-		p.setPrice(p.getPrice() * 1.1);
+	public void nonStaticPriceUpdate() {
+		setPrice(getPrice() * 1.1);
 	}
 	
 	@Override
@@ -41,6 +41,4 @@ public class Product {
 				+ ", price: $"
 				+ String.format("%.2f", price);
 	}
-	
-	
 }
